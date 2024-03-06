@@ -1,6 +1,6 @@
 import SearchBar from "../SearchBar/SearchBar";
 import { useState, useEffect, useRef } from "react";
-import { fetchImg } from "../../img-api";
+import { fetchImg } from "../../gallery-api";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import Modal from "react-modal";
 import ImageModal from "../ImageModal/ImageModal";
