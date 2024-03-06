@@ -1,13 +1,13 @@
-import SearchBar from '../SearchBar/SearchBar';
-import { useState, useEffect, useRef } from 'react';
-import { fetchImg } from '../../gallery-api';
-import ImageGallery from '../ImageGallery/ImageGallery';
-import Modal from 'react-modal';
-import ImageModal from '../ImageModal/ImageModal';
-import { Toaster } from 'react-hot-toast';
-import Loader from '../Loader/Loader';
-import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
-import modal from '../../components/ImageModal/ImageModal.module.css';
+import SearchBar from "../SearchBar/SearchBar";
+import { useState, useEffect, useRef } from "react";
+import { fetchImg } from "../../img-api";
+import ImageGallery from "../ImageGallery/ImageGallery";
+import Modal from "react-modal";
+import ImageModal from "../ImageModal/ImageModal";
+import { Toaster } from "react-hot-toast";
+import Loader from "../Loader/Loader";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
+import modal from "../../components/ImageModal/ImageModal.module.css";
 
 export const App = () => {
     const [img, setImg] = useState([]);
