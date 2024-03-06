@@ -13,11 +13,6 @@
     color: whitesmoke;
 }
 
-.icon {
-    width: 20px;
-    height: 20px;
-}
-
 .content {
     position: absolute;
     background: rgba(0, 0, 0, 0.7);

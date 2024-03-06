@@ -1,7 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import toast from "react-hot-toast";
 import css from "./SearchBar.module.css";
-import { CiSearch } from "react-icons/ci";
 
 const notify = () => {
     toast.error('Please type your search query');
@@ -29,7 +28,6 @@ export default function SearchBar({ onSearch }) {
               placeholder="Search images and photos"
             ></Field>
             <button className={css.btn} type="submit">
-              <CiSearch className={css.icon} />
             </button>
           </div>
 

@@ -1,5 +1,4 @@
 import css from "./ImageModal.module.css";
-import { LiaHandPointer } from "react-icons/lia";
 
 export default function ImageModal({
   content: {
@@ -23,8 +22,6 @@ export default function ImageModal({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LiaHandPointer className={css.icon} />
-          Raw pic, ready to download
         </a>
       </div>
     </>
