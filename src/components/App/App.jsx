@@ -54,38 +54,39 @@ export const App = () => {
         setPage(page + 1);
     };
 
-    const handleOpenModal = (value) => {
-        setModalIsOpen(true);
-        setModalContent(value);
-    };
+   const handleOpenModal = (value) => {
+    setModalIsOpen(true);
+    setModalContent(value);
+  };
 
     const closeModal = () => {
         setModalIsOpen(false);
     };
 
     return (
-        <div>
-            <SearchBar onSearch={handleSearch} />
-            {img.length > 0 && (
-                <ImageGallery
-                    ref={galleryRef}
-                    items={img}
-                handleOpenModal={handleLoadMoreBtn} />
-            )}
-            {isLoading && <Loader />}
-            {error && <p>An error occurred during the image retrieval process</p>}
-            {img.length > 0 && !isLoading && (
-                <LoadMoreBtn onClick={handleLoadMoreBtn} />
-            )}
-            <Modal 
-                className={modal.content}
-                overlayClassName={modal.overlay}
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-            >
-                <ImageModal content={modalContent} />
-            </Modal>
-            <Toaster position='top-center' />
-        </div>
-    );
+<div>
+      <SearchBar onSearch={handleSearch} />
+      {img.length > 0 && (
+        <ImageGallery
+          ref={galleryRef}
+          items={img}
+          onOpenModal={handleOpenModal}
+        />
+      )}
+      {isLoading && <Loader />}
+      {error && <p>Error occurred while fetching images.</p>}
+      {img.length > 0 && !isLoading && (
+        <LoadMoreBtn onClick={handleLoadMoreBtn} />
+      )}
+      <Modal
+        className={modal.content}
+        overlayClassName={modal.overlay}
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+      >
+        <ImageModal content={modalContent} />
+      </Modal>
+      <Toaster position="top-center" />
+    </div>
+  );
 };
