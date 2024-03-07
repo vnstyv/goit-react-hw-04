@@ -15,5 +15,5 @@ export const fetchImg = async (searchQuery, page) => {
            Authorization: `Client-ID ${API_KEY}`,
        }, 
     });
-    return Response.data.results;
+    return responce.data.results;
 };
