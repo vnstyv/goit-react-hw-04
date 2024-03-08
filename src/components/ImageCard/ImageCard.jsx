@@ -1,15 +1,15 @@
 import css from './ImageCard.module.css';
 
-export default function ImageCard({ item, onOpenModal }) {
-    const { small, alt_description } = item.urls;
+export default function ImageCard({ item, openModal }) {
+    const { small: imageUrl, alt_description: altDescription } = item.urls;
 
     return (
-        <div onClick={() => onOpenModal(item)}>
+        <div onClick={() => openModal(item)}>
             <img
                 className={css.img}
                 {...item.urls}
-                src={small}
-                alt={alt_description}
+                src={imageUrl}
+                alt={altDescription}
             />
         </div>
     );

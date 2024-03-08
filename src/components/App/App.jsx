@@ -68,7 +68,7 @@ const App = () => {
     <div>
       <SearchBar onSearch={handleSearch} />
       {img.length > 0 && (
-        <ImageGallery ref={galleryRef} items={img} onOpenModal={handleOpenModal} />
+        <ImageGallery ref={galleryRef} items={img} openModal={handleOpenModal} />
       )}
       {isLoading && <Loader />}
       {error && <p>Error occurred while fetching images.</p>}
