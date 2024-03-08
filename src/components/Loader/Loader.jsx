@@ -9,8 +9,8 @@ export default function Loader() {
             ariaLabel='magnifying-glass-loading'
             wrapperStyle={{}}
             wrapperClassName='magnifying-glass-wrapper'
-            glassColor='#c0efff'
-            color='#0707007'
+            glassColor='#ff0000'
+            color='#00ff00'
             />
     );
 }

@@ -9,21 +9,30 @@ export default function ImageModal({
   },
 }) {
   const tags = breadcrumbs.map((item) => item.slug).join(", ");
+  
+  const imageProps = {
+    className: css.img,
+    src: regular,
+    alt: alt_description,
+  };
+
+  const downloadProps = {
+    className: css.link,
+    href: raw,
+    download: `${alt_description}.jpg`,
+    target: "_blank",
+    rel: "noopener noreferrer",
+  };
+
   return (
     <>
-      <img className={css.img} src={regular} alt={alt_description} />
+      <img {...imageProps} />
       <div className={css.info}>
         <p>Likes: {likes}</p>
         <p>Tags: {tags}</p>
-        <a
-          className={css.link}
-          href={raw}
-          download={`${alt_description}.jpg`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
+        <a {...downloadProps}></a>
       </div>
     </>
   );
 }
+
